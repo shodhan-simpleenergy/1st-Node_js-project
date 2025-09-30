@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/shodhan-simpleenergy/1st-Node_js-project.git'
+                git branch: 'main', url: 'https://github.com/shodhan-simpleenergy/1st-Node_js-project.git'
             }
         }
 
