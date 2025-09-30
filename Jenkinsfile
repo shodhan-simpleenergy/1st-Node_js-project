@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("my-node-app:${env.BUILD_NUMBER}")
+                    docker.build("shodhansonu/my-node-app:${env.BUILD_NUMBER}")
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials') {
-                        docker.image("my-node-app:${env.BUILD_NUMBER}").push()
+                        docker.image("shodhansonu/my-node-app:${env.BUILD_NUMBER}").push()
                     }
                 }
             }
