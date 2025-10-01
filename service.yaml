@@ -9,5 +9,5 @@ spec:
   ports:
     - port: 3000
       targetPort: 3000
-      nodePort: 30001   # <- make sure this port is free on your nodes
+      nodePort: 30001
 
